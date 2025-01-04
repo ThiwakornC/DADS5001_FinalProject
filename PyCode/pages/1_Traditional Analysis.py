@@ -27,14 +27,6 @@ def load_data():
     return df
 df = load_data()
 
-df = df[['AppID','Name','Release date', 'Genres','Categories','Tags','Developers','Publishers','About the game']]
-df['AppID'] = df['AppID'].astype(str).sort_values().reset_index(drop=True)
-df['Developers'] = df['Developers'].str.upper()
-df['Publishers'] = df['Publishers'].str.upper()
-
-df['Release date'] = pd.to_datetime(df['Release date'], format='%d/%m/%Y')
-df['Month Release'] = df['Release date'].dt.strftime('01/%m/%Y')
-
 # Scatter Plot with flexible options
 if st.sidebar.checkbox("Show Scatter Plot"):
     numeric_columns = df.select_dtypes(include=['float64', 'int64']).columns
@@ -116,6 +108,16 @@ if st.sidebar.checkbox("Show Top 10 Tags"):
     else:
         st.warning("The dataset does not contain 'Genres' or 'Year released' column.")
 ###########################################################################################
+
+df = df[['AppID','Name','Release date', 'Genres','Categories','Tags','Developers','Publishers','About the game']]
+df['AppID'] = df['AppID'].astype(str).sort_values().reset_index(drop=True)
+df['Developers'] = df['Developers'].str.upper()
+df['Publishers'] = df['Publishers'].str.upper()
+
+df['Release date'] = pd.to_datetime(df['Release date'], format='%d/%m/%Y')
+df['Month Release'] = df['Release date'].dt.strftime('01/%m/%Y')
+
+
 if st.sidebar.checkbox("Genres"):
     st.title('Genres of Games Monthly')
     
