@@ -116,13 +116,7 @@ if st.sidebar.checkbox("Show Top 10 Tags"):
     else:
         st.warning("The dataset does not contain 'Genres' or 'Year released' column.")
 ###########################################################################################
-st.sidebar.title("Type of Analysis")
-Type = st.sidebar.radio(
-    "Choose Type:",
-    ("Genres", "Categories", "Tags")
-)
-
-if Type == "Genres":
+if st.sidebar.checkbox("Genres"):
     st.title('Genres of Games Monthly')
     
     # Split and process genres
@@ -444,7 +438,7 @@ if Type == "Genres":
 
 ################################################################################################################################
 
-if Type == "Categories":
+if st.sidebar.checkbox("Categories"):
     st.title('Categories of Games Monthly')
     
     # Split and process Categories
@@ -766,7 +760,7 @@ if Type == "Categories":
 
 ################################################################################################################################
 
-if Type == "Tags":
+if st.sidebar.checkbox("Tags"):
     st.title('Tags of Games Monthly')
     
     # Split and process Tags
