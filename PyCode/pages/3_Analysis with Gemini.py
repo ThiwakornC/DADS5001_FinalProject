@@ -9,6 +9,11 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 ###########################################################
+
+st.set_page_config(
+    page_title="Analysis with Gemini",
+    page_icon="🤖",
+)
 st.sidebar.write("### 3_Analysis with Gemini")
 
 @st.cache_data
