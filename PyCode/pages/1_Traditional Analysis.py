@@ -32,6 +32,8 @@ def load_data():
     return df
 df = load_data()
 
+st.write("### Traditional Analysis\nselect the options from the sidebar to analyze the data.")
+
 # Scatter Plot with flexible options
 if st.sidebar.checkbox("Show Scatter Plot"):
     numeric_columns = df.select_dtypes(include=['float64', 'int64']).columns
