@@ -28,6 +28,9 @@ ml_mode = st.sidebar.radio(
     ("Feature Importance", "Regression")
 )
 
+st.write("### Machine Learning Task: ", ml_mode)
+st.write('You can select target column on side bar.')
+
 if ml_mode == "Feature Importance":
     # Select target column
     numeric_columns = df.select_dtypes(include=['float64', 'int64']).columns
