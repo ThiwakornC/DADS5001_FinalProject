@@ -31,7 +31,7 @@ genai.configure(api_key=GOOGLE_API_KEY)
 model = genai.GenerativeModel('gemini-1.5-flash')
 
 # Title of Streamlit app
-st.title("Game Data Analysis")
+st.title("Game Data Analysis with Gemini")
 
 # File uploader for CSV
 uploaded_file = st.file_uploader("Upload a Game CSV file", type=["csv"])
