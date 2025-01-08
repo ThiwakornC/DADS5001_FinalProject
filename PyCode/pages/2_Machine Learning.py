@@ -8,6 +8,11 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 
+st.set_page_config(
+    page_title="Machine Learning",
+    page_icon="📈",
+)
+
 @st.cache_data
 def load_data():
     df = pd.read_csv("C:\\Users\\Thiwa\\dads5001\\Tools_Project\Game.csv", encoding='utf-8-sig') #change path
