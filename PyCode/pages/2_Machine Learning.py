@@ -57,9 +57,9 @@ if ml_mode == "Feature Importance":
             'Importance': model.feature_importances_
         }).sort_values(by='Importance', ascending=False)
 
-        st.write("### Feature Importance")
+        st.write("### Feature Importance Table")
         st.write(feature_importance)
-        fig = px.bar(feature_importance, x='Feature', y='Importance', title="Feature Importance")
+        fig = px.bar(feature_importance, x='Feature', y='Importance', title="Feature Importance chart")
         st.plotly_chart(fig, use_container_width=True)
     else:
         st.warning("The dataset must contain a 'Genres' column and a selected target column.")
@@ -99,7 +99,7 @@ elif ml_mode == "Regression":
                 y_pred = lin_reg.predict(X_test)
 
                 # Display regression metrics
-                st.write("### Regression Metrics")
+                #st.write("### Regression Metrics")
                 
                 # Display coefficients
                 coefficients = pd.DataFrame({
@@ -107,9 +107,9 @@ elif ml_mode == "Regression":
                     'Coefficient': lin_reg.coef_
                 }).sort_values(by='Coefficient', ascending=False)
 
-                st.write("### Regression Coefficients")
+                st.write("### Regression Coefficients Metrics")
                 st.write(coefficients)
-                fig = px.bar(coefficients, x='Feature', y='Coefficient', title="Regression Coefficients")
+                fig = px.bar(coefficients, x='Feature', y='Coefficient', title="Regression Coefficients chart")
                 st.plotly_chart(fig, use_container_width=True)
             else:
                 st.warning("Please select a valid target column for regression.")
