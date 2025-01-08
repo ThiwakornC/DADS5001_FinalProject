@@ -83,7 +83,7 @@ st.bar_chart(top_20_tags)
 #
 #st.plotly_chart(fig)
 
-st.title('Most Review Top 10')
+st.title('Most Games Review Top 10')
 df_rw = df[['Name', 'Total number of reviews', 'Positive', 'Negative']]
 top_10_rw = df_rw.sort_values('Total number of reviews', ascending=False).head(10)
 
@@ -157,7 +157,7 @@ st.plotly_chart(fig, use_container_width=True)
 
 ########################################################
 
-st.title('Top 5 Positive & Negative Review')
+st.title('Top 5 Positive & Negative Games Review')
 df_p_n_rw = df[['Name','Positive', 'Negative']]
 
 top_5_prw = df_p_n_rw.sort_values('Positive', ascending=False).head(5)
