@@ -14,7 +14,6 @@ st.set_page_config(
     page_title="Analysis with Gemini",
     page_icon="🤖",
 )
-st.sidebar.write("### 3_Analysis with Gemini")
 
 @st.cache_data
 def load_data():
