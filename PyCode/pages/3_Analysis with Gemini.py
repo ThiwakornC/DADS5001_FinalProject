@@ -22,8 +22,6 @@ def load_data():
     return df
 df = load_data()
 
-# Machine Learning Mode
-st.sidebar.write("### 3_Analysis with Gemini")
 #########################################################
 # Load .env
 load_dotenv()
