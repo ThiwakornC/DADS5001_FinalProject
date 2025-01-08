@@ -19,6 +19,11 @@ import re
 from collections import Counter
 import random
 
+st.set_page_config(
+    page_title="Traditional Analysis",
+    page_icon="📊",
+)
+
 st.sidebar.write("### Traditional Analysis")
 
 @st.cache_data
